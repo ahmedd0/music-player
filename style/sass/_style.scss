@@ -1,0 +1,53 @@
+body {
+  background:linear-gradient(45deg, #0fcb7678, #117be3);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.music-container {
+  h2 {
+    color: white;
+    font-weight: bold;
+  }
+  .info {
+    h4 {
+      color: white;
+    }
+    .image-song {
+      animation: rotate 2.5s linear infinite;
+      animation-play-state: paused;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+  }
+  .music-progress{
+    .progress-container {
+      height: 5px !important;
+      overflow: hidden;
+      background-color: #212529;
+      cursor: pointer;
+      .pg {
+        height: 100%;
+        background: wheat;
+        border-radius: 0.15rem;
+        width: 0;
+        transition: all 0.5s ease;
+      }
+    }
+  }
+}
+.music-container.play .image-song {
+  animation-play-state: running;
+}
+// keys
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
